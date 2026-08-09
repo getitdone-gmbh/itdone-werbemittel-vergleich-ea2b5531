@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Werbemittel-Vergleich – Die 50 größten deutschen Hersteller im Überblick</title>
 <meta name="description" content="Durchsuche und vergleiche Werbeartikel der größten deutschen Werbemittelhersteller nach Lagerbestand, Lieferzeit und Bewertung.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -15,7 +18,7 @@
       <span class="brand-mark">W</span>
       <div>
         <p class="brand-name">Werbemittel-Vergleich</p>
-        <p class="brand-tag">Katalog der 50 größten deutschen Hersteller</p>
+        <p class="brand-tag">Katalog der <strong class="brand-num">50</strong> größten deutschen Hersteller</p>
       </div>
     </div>
     <p class="header-hint">Suche z.&nbsp;B. „Kugelschreiber", „Tassen fürs Büro" oder „Regenschirm"</p>
@@ -34,51 +37,55 @@
 
 <main class="wrap main-grid">
   <aside class="filters" id="filters">
-    <h2>Filter</h2>
+    <details class="filters-panel" open>
+      <summary class="filters-summary">Filter</summary>
+      <div class="filters-body">
 
-    <label class="filter-block">
-      <span>Lagerbestand</span>
-      <select id="filter-stock">
-        <option value="0">Alle</option>
-        <option value="1">Auf Lager (&gt; 0)</option>
-        <option value="100">Mehr als 100 Stück</option>
-        <option value="500">Mehr als 500 Stück</option>
-        <option value="1000">Mehr als 1.000 Stück</option>
-      </select>
-    </label>
+        <label class="filter-block">
+          <span>Lagerbestand</span>
+          <select id="filter-stock">
+            <option value="0">Alle</option>
+            <option value="1">Auf Lager (&gt; 0)</option>
+            <option value="100">Mehr als 100 Stück</option>
+            <option value="500">Mehr als 500 Stück</option>
+            <option value="1000">Mehr als 1.000 Stück</option>
+          </select>
+        </label>
 
-    <label class="filter-block">
-      <span>Lieferzeit</span>
-      <select id="filter-delivery">
-        <option value="99">Alle</option>
-        <option value="3">Bis 3 Tage</option>
-        <option value="7">Bis 7 Tage</option>
-        <option value="14">Bis 14 Tage</option>
-      </select>
-    </label>
+        <label class="filter-block">
+          <span>Lieferzeit</span>
+          <select id="filter-delivery">
+            <option value="99">Alle</option>
+            <option value="3">Bis 3 Tage</option>
+            <option value="7">Bis 7 Tage</option>
+            <option value="14">Bis 14 Tage</option>
+          </select>
+        </label>
 
-    <label class="filter-block">
-      <span>Produktbewertung</span>
-      <select id="filter-rating">
-        <option value="0">Alle</option>
-        <option value="3">Ab 3,0 Sterne</option>
-        <option value="4">Ab 4,0 Sterne</option>
-        <option value="4.5">Ab 4,5 Sterne</option>
-      </select>
-    </label>
+        <label class="filter-block">
+          <span>Produktbewertung</span>
+          <select id="filter-rating">
+            <option value="0">Alle</option>
+            <option value="3">Ab 3,0 Sterne</option>
+            <option value="4">Ab 4,0 Sterne</option>
+            <option value="4.5">Ab 4,5 Sterne</option>
+          </select>
+        </label>
 
-    <label class="filter-block">
-      <span>Sortierung</span>
-      <select id="filter-sort">
-        <option value="relevance">Relevanz</option>
-        <option value="rating">Beste Bewertung</option>
-        <option value="delivery">Kürzeste Lieferzeit</option>
-        <option value="price">Günstigster Preis</option>
-        <option value="stock">Größter Lagerbestand</option>
-      </select>
-    </label>
+        <label class="filter-block">
+          <span>Sortierung</span>
+          <select id="filter-sort">
+            <option value="relevance">Relevanz</option>
+            <option value="rating">Beste Bewertung</option>
+            <option value="delivery">Kürzeste Lieferzeit</option>
+            <option value="price">Günstigster Preis</option>
+            <option value="stock">Größter Lagerbestand</option>
+          </select>
+        </label>
 
-    <button type="button" id="reset-filters" class="btn-ghost">Filter zurücksetzen</button>
+        <button type="button" id="reset-filters" class="btn-ghost">Filter zurücksetzen</button>
+      </div>
+    </details>
   </aside>
 
   <section class="results">
